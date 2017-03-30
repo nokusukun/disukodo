@@ -43,6 +43,7 @@ class Module():
 ```
 This is the skeleton for every framework. It features the loader and the scope.
 
+### Command Help
 ```
 	@on.cmdhelp("echo")
 	def hlp_echo():
@@ -52,11 +53,14 @@ This is the skeleton for every framework. It features the loader and the scope.
 ```
 This code gets returned in case of a command error, usually in cases where the syntax is invalid.
 
+### Command method
 ```
 	@on.command("echo")
 	async def echo(event, client):
 		await client.send_message(event.message.channel, " ".join(event.args[1:]))
 ```
+The code gets executed upon the detection of a `<prefix>echo` command with the command name defined in the decorator.
+
 This code contains the actual command code, every event features two arguments, the `event` object and `client` object.
 
 The `event` object is a Mapped dictionary containing event data.
