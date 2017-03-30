@@ -6,8 +6,7 @@ Modular framework for rapid bot development. The process revolves around decorat
 ## Example
 Sample Code
 ```
-from base import LOADER
-from base import ROLES
+from base import LOADER, ROLES
 on = LOADER.CommandLoader()
 
 class Module():
@@ -31,8 +30,7 @@ class Module():
 
 ### Boilerplate
 ```
-from base import LOADER
-from base import ROLES
+from base import LOADER, ROLES
 on = LOADER.CommandLoader()
 
 class Module():
@@ -41,7 +39,7 @@ class Module():
 		self.loader = on
 		self.scope = None
 ```
-This is the skeleton for every framework. It features the loader and the scope.
+This is the skeleton for every module. It features the loader and the scope.
 
 ### Command Help
 ```
