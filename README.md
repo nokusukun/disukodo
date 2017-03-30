@@ -29,9 +29,9 @@ class Module():
 	@on.message("log")
 	async def printLog(event, client):
 		print("(LOG)[{0}@{1}]{2}:\t{3}".format(event.server, 
-		event.message.channel, 
-		event.user.name,
-		event.message.content))
+			event.message.channel, 
+			event.user.name,
+			event.message.content))
 ```
 
 ### Boilerplate
