@@ -4,7 +4,7 @@
 Modular framework for rapid bot development. The process revolves around decorators for setting configuration.
 
 ## Example
-Sample Code
+Sample Code -_TestModule.py_
 ```
 from base import LOADER, ROLES
 on = LOADER.CommandLoader()
