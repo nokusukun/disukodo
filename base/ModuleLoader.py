@@ -25,8 +25,6 @@ class ModuleLoader():
     async def execute(self, **options):
         options = Map(options)
 
-        
-
         for mod in self.modules:
             commands = getattr(mod.loader, options.cmdtype)
             
@@ -39,11 +37,15 @@ class ModuleLoader():
                         print(traceback.print_exc())
                 return
 
+
             print("[cmd:{0}] ?> {1}".format(options.cmdtype, options.command))
+            
             if options.command in commands:
                 print("[cmd:{0}] OK> {1}".format(options.cmdtype, options.event.args))
                 user_roles = [x.name for x in options.event.user.roles]
                 print("user_roles: {0}".format(user_roles))
+
+
 
                 try:
                     await commands[options.command](options.event, options.client)
@@ -56,7 +58,7 @@ class ModuleLoader():
                         await options.client.send_message(options.event.message.channel,
                                                     embed=em)
                     except:
-                        
+
                         print("[cmd:{0}] !!".format(options.cmdtype))
                         em=embed.err_invalid("Generic command Error!", options.client)
                         print(em)
