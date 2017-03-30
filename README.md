@@ -25,7 +25,13 @@ class Module():
 	async def echo(event, client):
 		await client.send_message(event.message.channel, " ".join(event.args[1:]))
 
-
+	# Logs messages to console
+	@on.message("log")
+	async def printLog(event, client):
+		print("(LOG)[{0}@{1}]{2}:\t{3}".format(event.server, 
+										event.message.channel, 
+										event.user.name,
+										event.message.content))
 ```
 
 ### Boilerplate
