@@ -4,7 +4,7 @@ from base import ROLES
 PREFIX = "~"
 
 # Discord Bot Token
-BOT_TOKEN = "Mjk2NjcxOTEyMTcwNjE4ODgw.C71oxQ.8W-iIAF3d8zXC-r-C8aCMOWDmHc"
+BOT_TOKEN = ""
 
 # Bot Nickname, can be overriden through the client.
 # Reverts upon bot restart
